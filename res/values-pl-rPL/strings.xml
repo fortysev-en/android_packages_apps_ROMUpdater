@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2015 The CyanogenMod Project
+     Licensed under the GNU GPLv2 license
+     The text of the license can be found in the LICENSE file
+     or at https://www.gnu.org/licenses/gpl-2.0.txt
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General strings -->
+    <string name="app_name">Uaktualnienia ROM</string>
+    <string name="display_name">Aktualizacje ROM</string>
+    <string name="unknown">Nieznane</string>
+
+    <!-- Menu and dialog box strings -->
+    <string name="menu_refresh">Odśwież</string>
+    <string name="menu_delete_all">Usuń pobrane pliki</string>
+    <string name="menu_system_info">Informacje o systemie</string>
+    <string name="menu_system_info_tv">Informacje o systemie: tapnij aby odświeżyć listę</string>
+
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Anuluj</string>
+    <string name="dialog_update">Uaktualnij</string>
+    <string name="dialog_close">Zamknij</string>
+
+    <!-- Settings strings -->
+    <string name="available_updates_title">Dostępne uaktualnienia</string>
+    <string name="no_available_updates_intro">Podczas ostatniego wyszukiwania nie znaleziono żadnych uaktualnień. Aby ręcznie sprawdzić ich dostępność użyj przycisku Odśwież.</string>
+    <string name="no_available_updates_intro_tv">The last check did not find any available updates. To manually check for new updates, click \'System information\'.</string>
+    <string name="new_update_summary">Nowe</string>
+    <string name="old_update_summary">Starsza wersja</string>
+    <string name="downloaded_update_summary">Pobrane</string>
+    <string name="lost_downloaded_update_summary">Niewspierane</string>
+    <string name="installed_update_summary">Zainstalowane</string>
+
+    <string name="update_check_title">Sprawdź dostępność uaktualnień</string>
+    <string name="check_manual">Ręcznie</string>
+    <string name="check_on_boot">Przy każdym uruchomieniu systemu</string>
+    <string name="check_twice_daily">Dwa razy dziennie</string>
+    <string name="check_daily">Raz dziennie</string>
+    <string name="check_weekly">Raz w tygodniu</string>
+    <string name="check_bi_weekly">Dwa razy w tygodniu</string>
+    <string name="check_monthly">Co miesiąc</string>
+
+    <!-- Backup -->
+    <string name="backup_title">Zrób kopię przed wgraniem uaktualnienia</string>
+    <string name="backup_summary">Zrób kopię partycji: System, Boot i Data</string>
+
+    <!-- Custom Recovery -->
+    <string name="custom_recovery_title">Po wgraniu uaktualnień</string>
+    <string name="custom_recovery_summary">Wgraj GAppsy, Xposed, SuperSu, etc</string>
+
+    <!-- Update checking -->
+    <string name="checking_for_updates">Sprawdzam, czy są dostępne uaktualnienia</string>
+    <string name="no_updates_found">Nie znaleziono uaktualnień</string>
+    <string name="update_check_failed">Sprawdzanie nie powiodło się. Sprawdź swoje połączenie z internetem i spróbuj ponownie.</string>
+    <string name="not_new_updates_found_ticker">Nowe poprawki są dostępne!</string>
+    <string name="not_new_updates_found_title">Nowe uaktualnienia</string>
+    <string name="not_action_download">Pobierz</string>
+    <string name="data_connection_required">Wymagany jest przesył danych.</string>
+
+    <!-- Permission check -->
+    <string name="permission_not_granted_dialog_title">Uprawnienia nie zostały przyznane</string>
+    <string name="permission_not_granted_dialog_message">Pozwolenie na zapis do pamięci zewnętrznej nie zostało przyznane. Nie można pobrać poprawki.</string>
+
+    <!-- Downloads -->
+    <string name="confirm_download_cancelation_dialog_title">Przerwij pobieranie</string>
+    <string name="confirm_download_cancelation_dialog_message">Przerwać aktualne pobieranie?</string>
+    <string name="download_cancelled">Pobieranie przerwane</string>
+    <string name="download_already_running">Pobieranie jest już uruchomione</string>
+    <string name="unable_to_download_file">Nie można pobrać poprawki</string>
+    <string name="download_not_found">Nie znaleziono pliku do pobrania</string>
+    <string name="not_download_success">Poprawka została pomyślnie pobrana</string>
+    <string name="not_download_failure">Pobieranie poprawki zakończyło się niepowodzeniem</string>
+    <string name="not_action_install_update">Uruchom ponownie system i zainstaluj</string>
+    <string name="not_download_install_notice">Poprawka <xliff:g id="filename">%s</xliff:g> została pomyślnie pobrana. Gdy tapniesz \'Uruchom ponownie system i zainstaluj\', urządzenie zostanie uruchomione ponownie by wgrać poprawki.\n\nNotka: Wymagane jest kompatybilne recovery żeby wszystko mogło ruszyć.</string>
+
+    <!-- MD5 related strings -->
+    <string name="md5_verification_failed">Sprawdzanie MD5 nie powiodło się</string>
+
+    <!-- Apply update strings -->
+    <string name="apply_update_dialog_title">Zastosuj poprawkę</string>
+    <string name="apply_update_dialog_text">Za moment uaktualnisz system do wersji <xliff:g id="filename">%s</xliff:g>.\n\nJeśli tapniesz na Uaktualnij, Urządzenie uruchomi się do recovery aby zainstalować poprawki.\n\nNotka: Wymagane jest kompatybilne recovery, w innym wypadku poprawki będą musiały zostać wgrane ręcznie.</string>
+    <string name="apply_unable_to_reboot_toast">Nie udało się zrestartować do recovery</string>
+    <string name="apply_update_wipe_dialog_text">.\n\nPoprawka nie wyczyści Dalvik-Cache</string>
+    <string name="apply_update_post_dialog_text">.\n\nPoprawka nie uruchomi innych skryptów po aktualizacji</string>
+    <string name="apply_update_wipe_post_dialog_text">.\n\nPoprawka nie wyczyści Dalvik-Cache i nie uruchomi dodatkowych skryptów</string>
+
+    <!-- deleting -->
+    <string name="confirm_delete_dialog_title">Usuń plik</string>
+    <string name="confirm_delete_dialog_title_tv">Click to remove all downloaded updates from internal storage</string>
+    <string name="confirm_delete_dialog_message">Usunąć wybrany plik poprawki?</string>
+    <string name="confirm_delete_all_dialog_message">Usunąć wszystkie pobrane pliki poprawek?</string>
+    <string name="delete_single_update_success_message">Poprawka <xliff:g id="filename">%s</xliff:g> zostały usunięte</string>
+    <string name="delete_updates_failure_message">Przy usuwaniu plików wystąpił problem</string>
+    <string name="delete_updates_noFolder_message">Folder poprawek nie został znaleziony</string>
+    <string name="delete_updates_success_message">Wszystkie pobrane poprawki zostały usunięte</string>
+
+    <!-- System info strings -->
+    <string name="sysinfo_device">Model:</string>
+    <string name="sysinfo_running">Na pokładzie:</string>
+    <string name="sysinfo_update_channel">Kanał poprawek:</string>
+    <string name="sysinfo_last_check">Ostatnio sprawdzane:</string>
+
+    <!-- changelog strings -->
+    <string name="no_changelog_alert">Brak changeloga</string>
+    <string name="changelog_dialog_title">Lista zmian</string>
+    <string name="loading_changelog">Wczytywanie\u2026</string>
+
+    <!-- redirect download to browser -->
+    <string name="browser_redirect_dialog_title">Pobieranie ręczne</string>
+    <string name="browser_redirect_dialog_message">Z przyczyn technicznych nie można bezpośrednio pobrać pliku.\n\nOtworazymy teraz twoją przeglądarkę byś mógł zrobić to sam.\n\nDzięki za zrozumienie.</string>
+</resources>

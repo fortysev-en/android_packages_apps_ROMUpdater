@@ -1,0 +1,105 @@
+ROM Updater
+====================
+
+ROM Updater is a fork of CMUpdater but it keep the CyanogenMod compatibilty<br>
+
+It adds functions like:
+
+    OpenRecoveryScript support
+    Backup Support
+    Post update actions
+    Direct Download and Manual Download of a ROM
+    Wipe cache/dalvik and Post update actions control for specific flash procedure
+    Generic for all based AOSP ROM (but keep CyanogenMod compatibilty)
+    Static and CyanogenMod Rest API support
+
+AOSP build integration
+====================
+
+Add into device.mk:
+
+    # ROM Updater
+    ifeq ($(ROM_FINAL_NAME),)
+      $(error No ROM_FINAL_NAME defined.)
+    endif
+    
+    PRODUCT_PACKAGES += \
+        ROMUpdater
+    
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.build.version.updater=$(ROM_FINAL_NAME) \
+        persist.rom.updater.uri=https://www.dropbox.com/s/.../updates.txt?dl=1
+
+Add overlay:<br>
+check android_packages_apps_ROMUpdater/res/values/config.xml and configure it as you need (change default urls, disable OpenRecoveryScript support etc)<br>
+<br>
+<br>
+Commit needed:<br>
+Settings: https://github.com/mickybart/android_packages_apps_Settings/commit/cf644aead9caf8e17da1a9d568ceb1e6e2a820f2 <br>
+SELinux : https://github.com/mickybart/device_sony_nozomi/commit/fb82c7476dcd6b70f940cc808563f2fba039e6c8 <br>
+Framework/base: https://github.com/mickybart/android_frameworks_base/commit/c79751fe4a63b65c84b8e61b1d1a8a10eef3bf15 <br>
+Framework/base: https://github.com/mickybart/android_frameworks_base/commit/b698c32be0a97abc6997917642e7c87c7ba2566b <br>
+
+Server side
+====================
+
+Example of updates.txt content:
+
+    {
+     "id": null, 
+     "result": [
+      {
+       "url": "https://www.dropbox.com/s/.../nAOSProm-6.0-b05-f01.zip?dl=1", 
+       "timestamp": "1454716916", 
+       "md5sum": "91044e99c90b591cec7f472334fbf1f7", 
+       "filename": "nAOSProm-6.0-b05-f01.zip", 
+       "depends": "nAOSProm-6.0-b05",
+       "incremental": null, 
+       "channel": "stable", 
+       "changes": "https://www.dropbox.com/s/.../nAOSProm-6.0-bxx-changelog.txt?dl=1", 
+       "api_level": 23,
+       "wipe_cache" : false,
+       "direct_download" : true,
+       "post_flash" : false
+      },
+      {
+       "url": "https://www.androidfilehost.com/?fid=...", 
+       "timestamp": "1454614701", 
+       "md5sum": "63f2e2cd7bb88a98d4335090459fee6c", 
+       "filename": "nAOSProm-6.0-b05.zip", 
+       "incremental": null, 
+       "channel": "stable", 
+       "changes": "https://www.dropbox.com/s/.../nAOSProm-6.0-bxx-changelog.txt?dl=1", 
+       "api_level": 23,
+       "wipe_cache" : true,
+       "direct_download" : false,
+       "post_flash" : true
+      },
+     ], 
+     "error": null
+    }
+
+Example of changelog content:
+
+    ===================================
+    RELEASE NAME
+    ===================================
+    
+       * Important message
+    Feature 1
+    Feature 2
+    
+    ===================================
+    RELEASE NAME2
+    ===================================
+    
+    Feature 1
+    Feature ..
+    Feature N
+
+[XDA Thread](http://forum.xda-developers.com/xperia-s/acro-s-development/rom-naosp-rom-acro-s-t3507721) <br>
+Authors: <br>
+[hitman-xda](http://forum.xda-developers.com/member.php?u=6406816) <br>
+[mickybart](http://forum.xda-developers.com/member.php?u=6043081) <br>
+[millosr](http://forum.xda-developers.com/member.php?u=6754437)
+
